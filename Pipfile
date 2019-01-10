@@ -8,5 +8,9 @@ mypy = "*"
 
 [dev-packages]
 
+[scripts]
+start = 'python ./scripts/main.py'
+type = 'mypy ./scripts/main.py'
+
 [requires]
 python_version = "3.6"
