@@ -1,4 +1,4 @@
-from scripts.modules.myparser import MyParser
+from modules.myparser import MyParser
 
 
 def main() -> None:
