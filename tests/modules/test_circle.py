@@ -10,7 +10,7 @@ class Test_TestCircle(unittest.TestCase):
         self.assertEqual(c.area(), 0)
 
         c = Circle(3, Point(0, 0))
-        self.assertEqual(c.area(), 28.26)
+        self.assertAlmostEqual(c.area(), 28.27433388230813)
 
     def test_xmax(self):
         c = Circle(3, Point(4, 2))
