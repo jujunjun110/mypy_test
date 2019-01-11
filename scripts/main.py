@@ -1,19 +1,14 @@
-from modules.point import Point
-from modules.circle import Circle
+from scripts.modules.myparser import MyParser
 
 
 def main() -> None:
-    r = 2
-    o = Point(3, 3)
-    c = Circle(r, o)
+    p = MyParser()
+    num = p.extract_number("1a2b")
 
-    area = c.area()
-    origin = c.origin()
-    xmax = c.xmax()
+    if num is None:
+        return
 
-    print(area)
-    print(origin)
-    print(xmax)
+    print(num * 2)
 
 
 if __name__ == "__main__":
