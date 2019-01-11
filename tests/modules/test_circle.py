@@ -12,6 +12,10 @@ class Test_TestCircle(unittest.TestCase):
         c = Circle(3, Point(0, 0))
         self.assertEqual(c.area(), 28.26)
 
+    def test_xmax(self):
+        c = Circle(3, Point(4, 2))
+        self.assertEqual(c.xmax(), 7)
+
 
 if __name__ == "__main__":
     unittest.main()
