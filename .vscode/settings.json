@@ -1,0 +1,7 @@
+{
+    "python.venvPath": ".venv",
+    "python.pythonPath": "/Users/j-ito/.pyenv/versions/3.6.5/bin/python",
+    "python.formatting.provider":"black",
+    "python.linting.flake8Enabled": true,
+    "python.linting.mypyEnabled": true
+}
