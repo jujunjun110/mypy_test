@@ -9,7 +9,7 @@ mypy = "*"
 [dev-packages]
 
 [scripts]
-start = 'python ./scripts/main.py'
+start = 'python -B ./scripts/main.py'
 type = 'mypy ./scripts/main.py'
 
 [requires]
