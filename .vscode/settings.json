@@ -1,11 +1,9 @@
 {
-    "python.venvPath": ".venv",
-    "python.pythonPath": "/Users/j-ito/.pyenv/versions/3.6.5/bin/python",
+    "python.pythonPath": ".venv/bin/python",
     "editor.formatOnSave": true,
     "python.formatting.provider": "black",
-    "python.linting.lintOnSave": true,
     "python.linting.enabled": true,
-    "python.linting.flake8Enabled": true,
+    "python.linting.pylintEnabled": false,
     "python.linting.mypyEnabled": true,
     "python.unitTest.unittestEnabled": true,
     "python.unitTest.pyTestEnabled": false,
@@ -16,5 +14,5 @@
         "./tests/modules",
         "-p",
         "*test*.py"
-    ]
+    ],
 }
