@@ -41,13 +41,14 @@ class Book:
 class MarketClient:
     def __init__(self):
         self.client = None
+        self.pair = None
 
     def fetch_ticker(self) -> str:
-        return self.client.fetch_ticker("BTC/JPY")
+        return self.client.fetch_ticker(self.pair)
 
     def fetch_book(self) -> Optional[Book]:
         try:
-            book = self.client.fetch_order_book("BTC/JPY")
+            book = self.client.fetch_order_book(self.pair)
             return Book(book)
 
         except Exception:
@@ -58,3 +59,4 @@ class Bitflyer(MarketClient):
     def __init__(self):
         super().__init__()
         self.client = ccxt.bitflyer()
+        self.pair = "BTC/JPY"
