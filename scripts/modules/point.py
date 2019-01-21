@@ -7,4 +7,4 @@ class Point:
         return (self.x ** 2 + self.y ** 2) ** (1 / 2)
 
     def __str__(self) -> str:
-        return "Point ({}, {})".format(self.x, self.y)
+        return f"Point ({self.x}, {self.y})"
