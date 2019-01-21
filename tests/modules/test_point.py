@@ -4,7 +4,7 @@ from scripts.modules.point import Point
 
 
 class Test_TestPoint(unittest.TestCase):
-    def test_distance(self):
+    def test_distance(self) -> None:
         cases = [
             (Point(0, 0), 0),
             (Point(3, 4), 5),

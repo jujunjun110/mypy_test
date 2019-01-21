@@ -4,7 +4,7 @@ from scripts.modules.myparser import MyParser
 
 
 class Test_TestMyParser(unittest.TestCase):
-    def test_extract_number(self):
+    def test_extract_number(self) -> None:
         cases = [
             ("", None),
             ("abc", None),

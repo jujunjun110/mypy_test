@@ -39,9 +39,9 @@ class Book:
 
 
 class MarketClient:
-    def __init__(self):
-        self.client = None
-        self.pair = None
+    def __init__(self) -> None:
+        self.client: ccxt.base.exchange
+        self.pair: str
 
     def fetch_ticker(self) -> str:
         return self.client.fetch_ticker(self.pair)
@@ -56,7 +56,7 @@ class MarketClient:
 
 
 class Bitflyer(MarketClient):
-    def __init__(self):
+    def __init__(self) -> None:
         super().__init__()
         self.client = ccxt.bitflyer()
         self.pair = "BTC/JPY"
