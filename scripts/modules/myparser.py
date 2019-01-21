@@ -1,11 +1,12 @@
+import re
 from typing import Union
 
 
 class MyParser:
     def extract_number(self, text: str) -> Union[float, None]:
-        res = "".join([char for char in text if char in "0123456789.-"])
+        res = re.findall("[-.\d]{1}", text)
 
         if len(res) == 0:
             return None
 
-        return float(res)
+        return float("".join(res))
