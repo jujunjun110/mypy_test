@@ -7,6 +7,15 @@ class TestCryptoCurrency(unittest.TestCase):
     def seuUp(self) -> Bitflyer:
         self.client = Bitflyer()
 
+    def test_somehow_moves(self):
+        bf = Bitflyer()
+        buy_rate = bf.fetch_book().dig(Side.BUY, 0.5)
+        sell_rate = bf.fetch_book().dig(Side.SELL, 0.5)
+        print("buy_rate: {}".format(buy_rate))
+        print("sell_rate: {}".format(sell_rate))
+        self.assertEqual(type(buy_rate), float)
+        self.assertEqual(type(sell_rate), float)
+
     def test_book(self) -> None:
         book_dict = {
             "asks": [[200, 0.2], [210, 0.2], [220, 0.2], [230, 0.2], [240, 0.2]],

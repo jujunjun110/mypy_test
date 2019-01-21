@@ -38,9 +38,9 @@ class Book:
         return None
 
 
-class Bitflyer:
+class MarketClient:
     def __init__(self):
-        self.client = ccxt.bitflyer()
+        self.client = None
 
     def fetch_ticker(self) -> str:
         return self.client.fetch_ticker("BTC/JPY")
@@ -53,3 +53,8 @@ class Bitflyer:
         except Exception:
             return None
 
+
+class Bitflyer(MarketClient):
+    def __init__(self):
+        super().__init__()
+        self.client = ccxt.bitflyer()
